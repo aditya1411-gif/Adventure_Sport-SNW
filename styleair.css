@@ -1,0 +1,123 @@
+/* styleair.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Shojumaru&display=swap');
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background-color: #0c2340;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+}
+
+header > div h1 {
+  font-family: 'Shojumaru', cursive;
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 40px;
+}
+
+nav ul li {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  display: inline-block;
+}
+
+nav ul li a:hover {
+  background-color: #ff5722;
+  border-radius: 5px;
+}
+
+/* Main container with vertical stacking of sport blocks */
+main {
+  width: 90%;
+  max-width: 900px;
+  margin: 25px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Each sport block as flex row */
+main > div {
+  display: flex;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main > div:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+main img {
+  width: 40%;
+  object-fit: cover;
+  border-radius: 10px 0 0 10px;
+}
+
+/* Text container to hold heading and description */
+main > div > div {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+}
+
+main h3 {
+  margin: 0 0 15px;
+  color: #0c2340;
+  font-size: 1.8rem;
+}
+
+main p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Responsive for smaller screens: stack vertically */
+@media (max-width: 768px) {
+  main > div {
+    flex-direction: column;
+  }
+  main img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+  main > div > div {
+    width: 100%;
+    padding: 15px;
+  }
+  main h3 {
+    font-size: 1.5rem;
+  }
+}
