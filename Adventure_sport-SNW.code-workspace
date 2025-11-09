@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../html/grid"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Adventure_sport-SNW"
+	}
+}
